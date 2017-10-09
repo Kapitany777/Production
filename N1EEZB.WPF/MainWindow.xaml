@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:N1EEZB.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Production Module" Height="350" Width="525"
+        Style="{StaticResource WindowMain}">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit program" />
+            </MenuItem>
+
+            <MenuItem Header="Help">
+                <MenuItem Header="About Production Module" />
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
