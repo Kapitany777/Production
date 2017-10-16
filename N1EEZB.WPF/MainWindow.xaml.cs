@@ -1,4 +1,5 @@
-﻿using System;
+﻿using N1EEZB.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace N1EEZB.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DatabaseProvider databaseProvider; 
+
         public MainWindow()
         {
             InitializeComponent();
+
+            databaseProvider = new DatabaseProvider();
         }
     }
 }
