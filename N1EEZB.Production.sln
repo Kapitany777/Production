@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1EEZB.WPF", "N1EEZB.WPF\N1EEZB.WPF.csproj", "{3FFBB6B6-2D9B-4E29-AE94-2831972465E1}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1EEZB.GS1Barcodes.Test", "N1EEZB.GS1Barcodes.Test\N1EEZB.GS1Barcodes.Test.csproj", "{4850F3F9-F328-4B49-904A-0DF5AFA598A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1EEZB.Data", "N1EEZB.Data\N1EEZB.Data.csproj", "{7EB4804B-8B3A-4C5B-ADBC-1EF9F3AFE361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1EEZB.WpfControlLibrary", "N1EEZB.WpfControlLibrary\N1EEZB.WpfControlLibrary.csproj", "{CBBFCD0E-E2AB-49A1-8D5E-192D5EE7AF6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7EB4804B-8B3A-4C5B-ADBC-1EF9F3AFE361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB4804B-8B3A-4C5B-ADBC-1EF9F3AFE361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB4804B-8B3A-4C5B-ADBC-1EF9F3AFE361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBBFCD0E-E2AB-49A1-8D5E-192D5EE7AF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBFCD0E-E2AB-49A1-8D5E-192D5EE7AF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBFCD0E-E2AB-49A1-8D5E-192D5EE7AF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBFCD0E-E2AB-49A1-8D5E-192D5EE7AF6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

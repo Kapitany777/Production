@@ -1,12 +1,13 @@
-﻿<Window x:Class="N1EEZB.WPF.MainWindow"
+﻿<wpfctrl:WindowClass x:Class="N1EEZB.WPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:N1EEZB.WPF"
+        xmlns:wpfctrl="clr-namespace:N1EEZB.WpfControlLibrary;assembly=N1EEZB.WpfControlLibrary"
         mc:Ignorable="d"
         Title="Production Module" Height="350" Width="525"
-        Style="{StaticResource WindowMain}">
+        Style="{StaticResource WindowMain}" Icon="barcode.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -15,12 +16,25 @@
 
         <Menu Grid.Row="0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit program" />
+                <MenuItem Name="MenuExit" Header="Exit program" Click="MenuExit_Click" />
+            </MenuItem>
+
+            <MenuItem Header="Queries">
+                <MenuItem Name="MenuQueryStorages" Header="Query Storages"
+                          Click="MenuQueryStorages_Click" />
+
+                <Separator />
+                
+                <MenuItem Name="MenuQueryItemTypes" Header="Query Item Types"
+                          Click="MenuQueryItemTypes_Click" />
+                
             </MenuItem>
 
             <MenuItem Header="Help">
                 <MenuItem Header="About Production Module" />
             </MenuItem>
         </Menu>
+
+        <ContentControl Name="ContentControlMain" Grid.Row="1" />
     </Grid>
-</Window>
+</wpfctrl:WindowClass>

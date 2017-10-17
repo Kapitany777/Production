@@ -5,4 +5,11 @@
     <Style x:Key="WindowMain" TargetType="Window">
         <Setter Property="WindowState" Value="Maximized" />
     </Style>
+
+    <Style x:Key="DataGridMain" TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False" />
+        <Setter Property="CanUserAddRows" Value="False" />
+        <Setter Property="CanUserDeleteRows" Value="False" />
+        <Setter Property="IsReadOnly" Value="True" />
+    </Style>
 </ResourceDictionary>

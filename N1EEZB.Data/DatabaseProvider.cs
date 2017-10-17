@@ -1,4 +1,5 @@
-﻿using System;
+﻿using N1EEZB.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace N1EEZB.Data
 {
     public class DatabaseProvider
     {
+        #region Constructors
         public DatabaseProvider()
         {
             using (DbProductionContext context = new DbProductionContext())
@@ -18,6 +20,23 @@ namespace N1EEZB.Data
 
                     DataLoader.LoadDefaultData();
                 }
+            }
+        }
+        #endregion
+
+        public IEnumerable<ItemType> GetAllItemTypes()
+        {
+            using (DbProductionContext context = new DbProductionContext())
+            {
+                return context.ItemTypes.ToList();
+            }
+        }
+
+        public IEnumerable<Storage> GetAllStorages()
+        {
+            using (DbProductionContext context = new DbProductionContext())
+            {
+                return context.Storages.ToList();
             }
         }
     }

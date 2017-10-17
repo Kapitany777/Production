@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>barcode.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -62,6 +65,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControlQueryItemTypes.xaml.cs">
+      <DependentUpon>UserControlQueryItemTypes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlQueryStorages.xaml.cs">
+      <DependentUpon>UserControlQueryStorages.xaml</DependentUpon>
+    </Compile>
     <Page Include="DictionaryMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +87,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControlQueryItemTypes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlQueryStorages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -122,6 +139,13 @@
       <Project>{b5d4d0e0-5077-4a28-aaa4-04c59f7638a6}</Project>
       <Name>N1EEZB.MessageBoxes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\N1EEZB.WpfControlLibrary\N1EEZB.WpfControlLibrary.csproj">
+      <Project>{cbbfcd0e-e2ab-49a1-8d5e-192d5ee7af6c}</Project>
+      <Name>N1EEZB.WpfControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="barcode.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

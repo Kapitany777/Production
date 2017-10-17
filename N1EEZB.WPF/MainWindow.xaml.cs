@@ -1,4 +1,5 @@
 ﻿using N1EEZB.Data;
+using N1EEZB.WpfControlLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace N1EEZB.WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : WindowClass
     {
         private DatabaseProvider databaseProvider; 
 
@@ -28,6 +29,21 @@ namespace N1EEZB.WPF
             InitializeComponent();
 
             databaseProvider = new DatabaseProvider();
+        }
+
+        private void MenuQueryItemTypes_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlQueryItemTypes(databaseProvider);
+        }
+
+        private void MenuQueryStorages_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlQueryStorages(databaseProvider);
+        }
+
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
