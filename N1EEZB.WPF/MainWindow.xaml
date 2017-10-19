@@ -11,15 +11,16 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
-            <RowDefinition />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Menu Grid.Row="0">
             <MenuItem Header="File">
-                <MenuItem Name="MenuExit" Header="Exit program" Click="MenuExit_Click" />
+                <MenuItem Name="MenuExit" Header="Exit Program" Click="MenuExit_Click" />
             </MenuItem>
 
-            <MenuItem Header="Queries">
+            <MenuItem Header="Query Data">
                 <MenuItem Name="MenuQueryStorages" Header="Query Storages"
                           Click="MenuQueryStorages_Click" />
 
@@ -27,14 +28,84 @@
                 
                 <MenuItem Name="MenuQueryItemTypes" Header="Query Item Types"
                           Click="MenuQueryItemTypes_Click" />
-                
             </MenuItem>
 
+            <MenuItem Header="Items">
+                <MenuItem Name="MenuCreateItem" Header="Create New Item"
+                          Click="MenuCreateItem_Click" />
+
+                <MenuItem Name="MenuModifyItem" Header="Modify / Delete Item"
+                          Click="MenuModifyItem_Click" />
+
+                <Separator />
+
+                <MenuItem Name="MenuQueryItems" Header="Query Items"
+                          Click="MenuQueryItems_Click" />
+            </MenuItem>
+            
             <MenuItem Header="Help">
-                <MenuItem Header="About Production Module" />
+                <MenuItem Name="MenuAbout" Header="About Production Module"
+                          Click="MenuAbout_Click" />
             </MenuItem>
         </Menu>
 
-        <ContentControl Name="ContentControlMain" Grid.Row="1" />
+        <ToolBar Grid.Row="1">
+            <Button Name="ButtonQueryStorages" ToolTip="Query Storages" Style="{StaticResource ButtonToolbar}" Click="MenuQueryStorages_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/query.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Query Storages" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="ButtonQueryItemTypes" ToolTip="Query Item Types" Style="{StaticResource ButtonToolbar}" Click="MenuQueryItemTypes_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/query.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Query Item Types" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Separator />
+
+            <Button Name="ButtonCreateItem" ToolTip="Create New Item" Style="{StaticResource ButtonToolbar}" Click="MenuCreateItem_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/add.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Create New Item" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="ButtonModifyItem" ToolTip="Modify Item" Style="{StaticResource ButtonToolbar}" Click="MenuModifyItem_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/modify.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Modify Item" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="ButtonQueryItems" ToolTip="Query Items" Style="{StaticResource ButtonToolbar}" Click="MenuQueryItems_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/query.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Query Items" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Separator />
+            
+            <Button Name="ButtonAbout" ToolTip="About Program" Style="{StaticResource ButtonToolbar}" Click="MenuAbout_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/about.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="About Program" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+            
+            <Separator />
+
+            <Button Name="ButtonExit" ToolTip="Exit Program" Style="{StaticResource ButtonToolbar}" Click="MenuExit_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/exit.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Exit Program" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+        </ToolBar>
+        
+        <ContentControl Name="ContentControlMain" Grid.Row="2" />
     </Grid>
 </wpfctrl:WindowClass>

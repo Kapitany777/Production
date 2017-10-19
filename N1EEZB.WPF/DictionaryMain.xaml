@@ -6,10 +6,85 @@
         <Setter Property="WindowState" Value="Maximized" />
     </Style>
 
-    <Style x:Key="DataGridMain" TargetType="DataGrid">
+    <Style x:Key="ButtonToolbar" TargetType="Button">
+        <Setter Property="Margin" Value="0 4" />
+        <Setter Property="Width" Value="80" />
+    </Style>
+
+    <Style x:Key="ImageToolbar" TargetType="Image">
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Margin" Value="0 4" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="TextBlockToolbar" TargetType="TextBlock">
+        <Setter Property="Margin" Value="4 4" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="TextBlockHeader" TargetType="TextBlock">
+        <Setter Property="Margin" Value="0 10" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="StackPanelFilter" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="Margin" Value="10 5" />
+    </Style>
+
+    <Style x:Key="TextBlockFilter" TargetType="TextBlock">
+        <Setter Property="Margin" Value="10 4" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style x:Key="ComboBoxFilter" TargetType="ComboBox">
+        <Setter Property="Margin" Value="10 4" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style x:Key="DataGridQuery" TargetType="DataGrid">
         <Setter Property="AutoGenerateColumns" Value="False" />
         <Setter Property="CanUserAddRows" Value="False" />
         <Setter Property="CanUserDeleteRows" Value="False" />
         <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="SelectionMode" Value="Single" />
+        <Setter Property="AlternatingRowBackground" Value="#FFF0F0F0" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="AboutWindowStyle" TargetType="Window">
+        <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="WindowStyle" Value="SingleBorderWindow" />
+        <Setter Property="Background" Value="#ffe0e0e0" />
+        <Setter Property="ShowInTaskbar" Value="False" />
+    </Style>
+
+    <Style x:Key="TextBlockAboutTitle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="15 20" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <Style x:Key="TextBlockAboutVersion" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Margin" Value="15 10" />
+    </Style>
+
+    <Style x:Key="ImageAbout" TargetType="Image">
+        <Setter Property="Margin" Value="20 15 0 0" />
+    </Style>
+
+    <Style x:Key="ButtonAbout" TargetType="Button">
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Margin" Value="15" />
     </Style>
 </ResourceDictionary>

@@ -1,5 +1,4 @@
-﻿using N1EEZB.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,21 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace N1EEZB.WPF
 {
     /// <summary>
-    /// Interaction logic for UserControlQueryStorages.xaml
+    /// Interaction logic for DialogAbout.xaml
     /// </summary>
-    public partial class UserControlQueryStorages : UserControlBase
+    public partial class DialogAbout : Window
     {
-        public UserControlQueryStorages(DatabaseProvider databaseProvider) : base(databaseProvider)
+        public DialogAbout()
         {
             InitializeComponent();
+        }
 
-            DataGridMain.ItemsSource = databaseProvider.GetAllStorages();
+        private void ButtonOk_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
         }
     }
 }

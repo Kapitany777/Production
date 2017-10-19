@@ -22,7 +22,7 @@ namespace N1EEZB.WPF
     /// </summary>
     public partial class MainWindow : WindowClass
     {
-        private DatabaseProvider databaseProvider; 
+        private DatabaseProvider databaseProvider;
 
         public MainWindow()
         {
@@ -31,19 +31,40 @@ namespace N1EEZB.WPF
             databaseProvider = new DatabaseProvider();
         }
 
-        private void MenuQueryItemTypes_Click(object sender, RoutedEventArgs e)
-        {
-            ContentControlMain.Content = new UserControlQueryItemTypes(databaseProvider);
-        }
-
         private void MenuQueryStorages_Click(object sender, RoutedEventArgs e)
         {
             ContentControlMain.Content = new UserControlQueryStorages(databaseProvider);
         }
 
+        private void MenuQueryItemTypes_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlQueryItemTypes(databaseProvider);
+        }
+
+        private void MenuCreateItem_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlCreateItem(databaseProvider);
+        }
+
+        private void MenuModifyItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuQueryItems_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlQueryItems(databaseProvider);
+        }
+
         private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void MenuAbout_Click(object sender, RoutedEventArgs e)
+        {
+            DialogAbout dialogAbout = new DialogAbout();
+            dialogAbout.ShowDialog();
         }
     }
 }

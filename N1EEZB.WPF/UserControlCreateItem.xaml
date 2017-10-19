@@ -1,0 +1,46 @@
+﻿<local:UserControlBase x:Class="N1EEZB.WPF.UserControlCreateItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:N1EEZB.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Create New Item" Style="{StaticResource TextBlockHeader}" Grid.Row="0" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Item Type:" Grid.Row="0" Grid.Column="0" />
+            <ComboBox Name="ComboBoxItemType" DisplayMemberPath="ItemTypeName" Grid.Row="0" Grid.Column="1" />
+
+            <TextBlock Text="Item Code:" Grid.Row="1" Grid.Column="0" />
+            <TextBox Name="TextBoxItemCode" MaxLength="20" Grid.Row="1" Grid.Column="1" />
+
+            <TextBlock Text="Item Name:" Grid.Row="2" Grid.Column="0" />
+            <TextBox Name="TextBoxItemName" MaxLength="40" Grid.Row="2" Grid.Column="1" />
+
+            <TextBlock Text="GTIN-14:" Grid.Row="3" Grid.Column="0" />
+            <TextBox Name="TextBoxGTIN14" MaxLength="14" Grid.Row="3" Grid.Column="1" />
+
+            <Button Name="ButtonCreate" Content="Create Item" Grid.Row="4" Grid.Column="0" Click="ButtonCreate_Click" />
+        </Grid>
+    </Grid>
+</local:UserControlBase>

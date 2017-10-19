@@ -65,12 +65,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DialogAbout.xaml.cs">
+      <DependentUpon>DialogAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBase.cs" />
+    <Compile Include="UserControlCreateItem.xaml.cs">
+      <DependentUpon>UserControlCreateItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlQueryItems.xaml.cs">
+      <DependentUpon>UserControlQueryItems.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlQueryItemTypes.xaml.cs">
       <DependentUpon>UserControlQueryItemTypes.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControlQueryStorages.xaml.cs">
       <DependentUpon>UserControlQueryStorages.xaml</DependentUpon>
     </Compile>
+    <Page Include="DialogAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DictionaryMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +101,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControlCreateItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlQueryItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlQueryItemTypes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,6 +168,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="barcode.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+    <Resource Include="Images\query.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pyramid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\modify.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

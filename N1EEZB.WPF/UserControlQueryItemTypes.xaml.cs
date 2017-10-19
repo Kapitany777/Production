@@ -19,15 +19,11 @@ namespace N1EEZB.WPF
     /// <summary>
     /// Interaction logic for UserControlQueryItemTypes.xaml
     /// </summary>
-    public partial class UserControlQueryItemTypes : UserControl
+    public partial class UserControlQueryItemTypes : UserControlBase
     {
-        private DatabaseProvider databaseProvider;
-
-        public UserControlQueryItemTypes(DatabaseProvider databaseProvider)
+        public UserControlQueryItemTypes(DatabaseProvider databaseProvider) : base(databaseProvider)
         {
             InitializeComponent();
-
-            this.databaseProvider = databaseProvider;
 
             DataGridMain.ItemsSource = databaseProvider.GetAllItemTypes();
         }
