@@ -8,10 +8,6 @@ namespace N1EEZB.GS1Barcodes
 {
     public class GS1ApplicationIdentifiers
     {
-        #region Properties
-
-        #endregion
-
         #region Private fields
         private List<GS1ApplicationIdentifier> applicationIdentifiers;
         #endregion
@@ -86,7 +82,7 @@ namespace N1EEZB.GS1Barcodes
             }
             else
             {
-                throw new GS1ApplicationIdentifierNotFound();
+                throw new GS1ApplicationIdentifierNotFoundException();
             }
         }
         #endregion

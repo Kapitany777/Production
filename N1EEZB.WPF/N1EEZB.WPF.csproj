@@ -72,6 +72,12 @@
     <Compile Include="UserControlCreateItem.xaml.cs">
       <DependentUpon>UserControlCreateItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlModifyItem.xaml.cs">
+      <DependentUpon>UserControlModifyItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlProduction.xaml.cs">
+      <DependentUpon>UserControlProduction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlQueryItems.xaml.cs">
       <DependentUpon>UserControlQueryItems.xaml</DependentUpon>
     </Compile>
@@ -102,6 +108,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControlCreateItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlModifyItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlProduction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gear.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

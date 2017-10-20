@@ -26,7 +26,7 @@ namespace N1EEZB.GS1Barcodes.Test
         [TestMethod]
         [TestCategory("Application Identifiers")]
         [Owner("Viktor")]
-        [ExpectedException(typeof(GS1ApplicationIdentifierNotFound))]
+        [ExpectedException(typeof(GS1ApplicationIdentifierNotFoundException))]
         public void TestApplicationIdentifierNotFound()
         {
             GS1ApplicationIdentifiers ais = new GS1ApplicationIdentifiers();

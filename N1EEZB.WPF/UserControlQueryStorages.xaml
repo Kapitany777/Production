@@ -17,7 +17,7 @@
         <DataGrid Name="DataGridMain" Style="{StaticResource DataGridQuery}" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Storage ID" Binding="{Binding StorageId}" />
-                <DataGridTextColumn Header="Name" Binding="{Binding StorageName}" />
+                <DataGridTextColumn Header="Storage Name" Binding="{Binding StorageName}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

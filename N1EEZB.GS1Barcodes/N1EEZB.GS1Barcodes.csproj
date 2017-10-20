@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateParser.cs" />
     <Compile Include="GS1ApplicationIdentifier.cs" />
     <Compile Include="GS1ApplicationIdentifierExceptions.cs" />
     <Compile Include="GS1ApplicationIdentifierFormat.cs" />
     <Compile Include="GS1ApplicationIdentifiers.cs" />
+    <Compile Include="GS1Barcode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

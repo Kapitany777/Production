@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:N1EEZB.WPF"
         xmlns:wpfctrl="clr-namespace:N1EEZB.WpfControlLibrary;assembly=N1EEZB.WpfControlLibrary"
         mc:Ignorable="d"
-        Title="Production Module" Height="350" Width="525"
+        Title="Production Module" Height="350" Width="800"
         Style="{StaticResource WindowMain}" Icon="barcode.ico">
     <Grid>
         <Grid.RowDefinitions>
@@ -25,7 +25,7 @@
                           Click="MenuQueryStorages_Click" />
 
                 <Separator />
-                
+
                 <MenuItem Name="MenuQueryItemTypes" Header="Query Item Types"
                           Click="MenuQueryItemTypes_Click" />
             </MenuItem>
@@ -42,7 +42,12 @@
                 <MenuItem Name="MenuQueryItems" Header="Query Items"
                           Click="MenuQueryItems_Click" />
             </MenuItem>
-            
+
+            <MenuItem Header="Production">
+                <MenuItem Name="MenuStartProduction" Header="Start Production"
+                          Click="MenuStartProduction_Click" />
+            </MenuItem>
+
             <MenuItem Header="Help">
                 <MenuItem Name="MenuAbout" Header="About Production Module"
                           Click="MenuAbout_Click" />
@@ -88,14 +93,23 @@
             </Button>
 
             <Separator />
-            
+
+            <Button Name="ButtonStartProduction" ToolTip="Start Production" Style="{StaticResource ButtonToolbar}" Click="MenuStartProduction_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/gear.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Start Production" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Separator />
+
             <Button Name="ButtonAbout" ToolTip="About Program" Style="{StaticResource ButtonToolbar}" Click="MenuAbout_Click">
                 <StackPanel Orientation="Vertical">
                     <Image Source="Images/about.png" Style="{StaticResource ImageToolbar}" />
                     <TextBlock Text="About Program" Style="{StaticResource TextBlockToolbar}" />
                 </StackPanel>
             </Button>
-            
+
             <Separator />
 
             <Button Name="ButtonExit" ToolTip="Exit Program" Style="{StaticResource ButtonToolbar}" Click="MenuExit_Click">
@@ -105,7 +119,7 @@
                 </StackPanel>
             </Button>
         </ToolBar>
-        
+
         <ContentControl Name="ContentControlMain" Grid.Row="2" />
     </Grid>
 </wpfctrl:WindowClass>

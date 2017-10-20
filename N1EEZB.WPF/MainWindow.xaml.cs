@@ -48,7 +48,7 @@ namespace N1EEZB.WPF
 
         private void MenuModifyItem_Click(object sender, RoutedEventArgs e)
         {
-
+            ContentControlMain.Content = new UserControlModifyItem(databaseProvider);
         }
 
         private void MenuQueryItems_Click(object sender, RoutedEventArgs e)
@@ -56,15 +56,20 @@ namespace N1EEZB.WPF
             ContentControlMain.Content = new UserControlQueryItems(databaseProvider);
         }
 
-        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        private void MenuStartProduction_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            ContentControlMain.Content = new UserControlProduction(databaseProvider);
         }
 
         private void MenuAbout_Click(object sender, RoutedEventArgs e)
         {
             DialogAbout dialogAbout = new DialogAbout();
             dialogAbout.ShowDialog();
+        }
+
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

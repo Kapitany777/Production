@@ -17,5 +17,7 @@ namespace N1EEZB.Data.Models
         [Required]
         [StringLength(40)]
         public string ItemTypeName { get; set; }
+
+        public ICollection<Item> Items { get; set; }
     }
 }
