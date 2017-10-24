@@ -62,6 +62,15 @@ namespace N1EEZB.WPF
                 }
 
                 TextBlockLotNumber.Text = barcode.BatchOrLotNumber;
+
+                databaseProvider.AddProduction(
+                    new ProductionData
+                    {
+                        GS1Barcode = TextBoxBarcode.Text,
+                        Item = item,
+                        Quantity = item.QuantityPerItem
+                    }
+                    );
             }
             catch (Exception ex)
             {

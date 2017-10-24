@@ -172,5 +172,21 @@ namespace N1EEZB.Data
             }
         }
         #endregion
+
+        #region Production methods
+        /// <summary>
+        /// Add production data
+        /// </summary>
+        /// <param name="productionData">Production data</param>
+        public void AddProduction(ProductionData productionData)
+        {
+            using (DbProductionContext context = new DbProductionContext())
+            {
+                context.Entry(productionData.Item).State = EntityState.Unchanged;
+                context.ProductionDatas.Add(productionData);
+                context.SaveChanges();
+            }
+        }
+        #endregion
     }
 }

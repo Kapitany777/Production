@@ -21,6 +21,7 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -40,7 +41,10 @@
             <TextBlock Text="GTIN-14:" Grid.Row="3" Grid.Column="0" Style="{StaticResource TextBlockLabel}" />
             <TextBox Name="TextBoxGTIN14" MaxLength="14" Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBoxData}" />
 
-            <Button Name="ButtonCreate" Content="Create Item" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ButtonAction}"
+            <TextBlock Text="Quantity Per Item:" Grid.Row="4" Grid.Column="0" Style="{StaticResource TextBlockLabel}" />
+            <TextBox Name="TextBoxQuantityPerItem" MaxLength="5" Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBoxData}" />
+
+            <Button Name="ButtonCreate" Content="Create Item" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ButtonAction}"
                     Click="ButtonCreate_Click" />
         </Grid>
     </Grid>

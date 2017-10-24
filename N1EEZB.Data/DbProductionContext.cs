@@ -25,6 +25,7 @@ namespace N1EEZB.Data
         public virtual DbSet<ItemType> ItemTypes { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Storage> Storages { get; set; }
+        public virtual DbSet<ProductionData> ProductionDatas { get; set; }
     }
 
     //public class MyEntity

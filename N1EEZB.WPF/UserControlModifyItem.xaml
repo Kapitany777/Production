@@ -22,6 +22,7 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -42,10 +43,13 @@
             <TextBlock Text="GTIN-14:" Grid.Row="3" Grid.Column="0" Style="{StaticResource TextBlockLabel}" />
             <TextBox Name="TextBoxGTIN14" MaxLength="14" Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBoxData}" />
 
-            <Button Name="ButtonModify" Content="Modify" Style="{StaticResource ButtonAction}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+            <TextBlock Text="Quantity Per Item:" Grid.Row="4" Grid.Column="0" Style="{StaticResource TextBlockLabel}" />
+            <TextBox Name="TextBoxQuantityPerItem" MaxLength="5" Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBoxData}" />
+
+            <Button Name="ButtonModify" Content="Modify" Style="{StaticResource ButtonAction}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
                     Click="ButtonModify_Click" />
 
-            <Button Name="ButtonDelete" Content="Delete" Style="{StaticResource ButtonAction}" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+            <Button Name="ButtonDelete" Content="Delete" Style="{StaticResource ButtonAction}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
                     Click="ButtonDelete_Click" />
         </Grid>
 

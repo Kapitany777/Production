@@ -40,6 +40,7 @@ namespace N1EEZB.WPF
                 TextBlockItemCode.Text = item.ItemCode;
                 TextBoxItemName.Text = item.ItemName;
                 TextBoxGTIN14.Text = item.GTIN14;
+                TextBoxQuantityPerItem.Text = item.QuantityPerItem.ToString();
             }
         }
 
@@ -59,6 +60,12 @@ namespace N1EEZB.WPF
             if (string.IsNullOrEmpty(TextBoxGTIN14.Text))
             {
                 WPFMessageBox.MsgError("GTIN-14 is required!");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(TextBoxQuantityPerItem.Text))
+            {
+                WPFMessageBox.MsgError("Quantity Per Item is required!");
                 return false;
             }
 
@@ -82,6 +89,7 @@ namespace N1EEZB.WPF
                 Item selectedItem = ComboBoxItem.SelectedItem as Item;
                 selectedItem.ItemName = TextBoxItemName.Text;
                 selectedItem.GTIN14 = TextBoxGTIN14.Text;
+                selectedItem.QuantityPerItem = int.Parse(TextBoxQuantityPerItem.Text);
                 databaseProvider.ModifyItem(selectedItem);
 
                 WPFMessageBox.MsgInfo("Item successfully updated!");

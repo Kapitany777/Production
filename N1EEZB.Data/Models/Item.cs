@@ -25,6 +25,9 @@ namespace N1EEZB.Data.Models
         [Required]
         [StringLength(14)]
         public string GTIN14 { get; set; }
+
+        [Required]
+        public int QuantityPerItem { get; set; }
         
         public ItemType ItemType { get; set; }
     }

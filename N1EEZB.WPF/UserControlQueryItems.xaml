@@ -25,6 +25,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Item Code" Binding="{Binding ItemCode}" />
                 <DataGridTextColumn Header="Item Name" Binding="{Binding ItemName}" />
+                <DataGridTextColumn Header="GTIN-14" Binding="{Binding GTIN14}" />
+                <DataGridTextColumn Header="Quantity Per Item" Binding="{Binding QuantityPerItem}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

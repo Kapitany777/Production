@@ -53,6 +53,7 @@
     <Compile Include="DatabaseProvider.cs" />
     <Compile Include="DataLoader.cs" />
     <Compile Include="DbProductionContext.cs" />
+    <Compile Include="Models\ProductionData.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Storage.cs" />

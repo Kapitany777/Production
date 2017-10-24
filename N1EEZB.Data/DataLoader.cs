@@ -41,6 +41,7 @@ namespace N1EEZB.Data
                         ItemCode = "I00001",
                         ItemName = "Cherry Ice Cream",
                         GTIN14 = "05991234500013",
+                        QuantityPerItem = 10,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Ice Cream")
                     });
 
@@ -50,6 +51,7 @@ namespace N1EEZB.Data
                         ItemCode = "I00002",
                         ItemName = "Chocolate Ice Cream",
                         GTIN14 = "05991234500020",
+                        QuantityPerItem = 10,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Ice Cream")
                     });
 
@@ -59,6 +61,7 @@ namespace N1EEZB.Data
                         ItemCode = "I00003",
                         ItemName = "Mango Ice Cream",
                         GTIN14 = "05991234500037",
+                        QuantityPerItem = 10,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Ice Cream")
                     });
 
@@ -68,6 +71,7 @@ namespace N1EEZB.Data
                         ItemCode = "I00004",
                         ItemName = "Raspberry Ice Cream",
                         GTIN14 = "05991234500044",
+                        QuantityPerItem = 10,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Ice Cream")
                     });
 
@@ -77,6 +81,7 @@ namespace N1EEZB.Data
                         ItemCode = "I00005",
                         ItemName = "Vanilla Ice Cream",
                         GTIN14 = "05991234500051",
+                        QuantityPerItem = 10,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Ice Cream")
                     });
 
@@ -87,6 +92,7 @@ namespace N1EEZB.Data
                         ItemCode = "C00001",
                         ItemName = "Dark Chocolate",
                         GTIN14 = "05991234500068",
+                        QuantityPerItem = 8,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Chocolate")
                     });
 
@@ -96,6 +102,7 @@ namespace N1EEZB.Data
                         ItemCode = "C00002",
                         ItemName = "Milk Chocolate",
                         GTIN14 = "05991234500075",
+                        QuantityPerItem = 8,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Chocolate")
                     });
 
@@ -105,6 +112,7 @@ namespace N1EEZB.Data
                         ItemCode = "C00003",
                         ItemName = "White Chocolate",
                         GTIN14 = "05991234500082",
+                        QuantityPerItem = 8,
                         ItemType = context.ItemTypes.SingleOrDefault(x => x.ItemTypeName == "Chocolate")
                     });
 

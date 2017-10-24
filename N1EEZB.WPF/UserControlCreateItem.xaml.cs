@@ -51,6 +51,12 @@ namespace N1EEZB.WPF
                 return false;
             }
 
+            if (string.IsNullOrEmpty(TextBoxQuantityPerItem.Text))
+            {
+                WPFMessageBox.MsgError("Quantity Per Item is required!");
+                return false;
+            }
+
             return true;
         }
 
@@ -62,6 +68,7 @@ namespace N1EEZB.WPF
                     ItemCode = TextBoxItemCode.Text,
                     ItemName = TextBoxItemName.Text,
                     GTIN14 = TextBoxGTIN14.Text,
+                    QuantityPerItem = int.Parse(TextBoxQuantityPerItem.Text),
                     ItemType = ComboBoxItemType.SelectedItem as ItemType
                 }
                 );
@@ -81,6 +88,7 @@ namespace N1EEZB.WPF
                 TextBoxItemCode.Clear();
                 TextBoxItemName.Clear();
                 TextBoxGTIN14.Clear();
+                TextBoxQuantityPerItem.Clear();
                 ComboBoxItemType.SelectedIndex = 0;
 
                 WPFMessageBox.MsgInfo("Item successfully created!");
