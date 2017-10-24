@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace N1EEZB.Data
 {
+    /// <summary>
+    /// Create test data
+    /// </summary>
     public class DataLoader
     {
+        /// <summary>
+        /// Create some test data
+        /// </summary>
         public static void LoadDefaultData()
         {
             using (DbProductionContext context = new DbProductionContext())

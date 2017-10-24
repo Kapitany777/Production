@@ -8,6 +8,9 @@ using System.Data.Entity;
 
 namespace N1EEZB.Data
 {
+    /// <summary>
+    /// Database operations
+    /// </summary>
     public class DatabaseProvider
     {
         #region Constructors

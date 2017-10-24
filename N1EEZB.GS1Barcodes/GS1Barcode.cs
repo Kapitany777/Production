@@ -6,15 +6,45 @@ using System.Threading.Tasks;
 
 namespace N1EEZB.GS1Barcodes
 {
+    /// <summary>
+    /// GS1 Barcode parser class
+    /// </summary>
     public class GS1Barcode
     {
         #region Properties
+        /// <summary>
+        /// The barcode
+        /// </summary>
         public string Barcode { get; private set; }
+
+        /// <summary>
+        /// Global Trade Item Number (GTIN)
+        /// </summary>
         public string GlobalTradeItemNumber { get; private set; }
+
+        /// <summary>
+        /// Batch or LOT Number
+        /// </summary>
         public string BatchOrLotNumber { get; private set; }
+
+        /// <summary>
+        /// Packaging Date
+        /// </summary>
         public DateTime PackagingDate { get; private set; }
+
+        /// <summary>
+        /// Best Before Date
+        /// </summary>
         public DateTime BestBeforeDate { get; private set; }
+
+        /// <summary>
+        /// Expiration Date
+        /// </summary>
         public DateTime ExpirationDate { get; private set; }
+
+        /// <summary>
+        /// Country of Origin
+        /// </summary>
         public string CountryOfOrigin { get; private set; }
         #endregion
 
@@ -28,6 +58,11 @@ namespace N1EEZB.GS1Barcodes
         #endregion
 
         #region Private methods
+        /// <summary>
+        /// Set the value of a string field
+        /// </summary>
+        /// <param name="applicationIdentifier">Application Identifier</param>
+        /// <param name="data">Data from the barcode</param>
         private void SetStringField(GS1ApplicationIdentifier applicationIdentifier, string data)
         {
             switch (applicationIdentifier.AI)
@@ -41,6 +76,11 @@ namespace N1EEZB.GS1Barcodes
             }
         }
 
+        /// <summary>
+        /// Set the value of a numeric field
+        /// </summary>
+        /// <param name="applicationIdentifier">Application Identifier</param>
+        /// <param name="data">Data from the barcode</param>
         private void SetNumericField(GS1ApplicationIdentifier applicationIdentifier, string data)
         {
             try
@@ -67,6 +107,11 @@ namespace N1EEZB.GS1Barcodes
             }
         }
 
+        /// <summary>
+        /// Set the value of a date field
+        /// </summary>
+        /// <param name="applicationIdentifier">Application Identifier</param>
+        /// <param name="data">Data from the barcode</param>
         private void SetDateField(GS1ApplicationIdentifier applicationIdentifier, string data)
         {
             DateTime date;
@@ -99,6 +144,11 @@ namespace N1EEZB.GS1Barcodes
             }
         }
 
+        /// <summary>
+        /// Set the value of a field
+        /// </summary>
+        /// <param name="applicationIdentifier">Application Identifier</param>
+        /// <param name="data">Data from the barcode</param>
         private void SetField(GS1ApplicationIdentifier applicationIdentifier, string data)
         {
             switch (applicationIdentifier.Format)
@@ -117,6 +167,9 @@ namespace N1EEZB.GS1Barcodes
             }
         }
 
+        /// <summary>
+        /// Parsing of the barcode
+        /// </summary>
         private void ParseBarcode()
         {
             GS1ApplicationIdentifiers applicationIdentifiers = new GS1ApplicationIdentifiers();

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace N1EEZB.GS1Barcodes
 {
+    /// <summary>
+    /// GS1 Application Identifiers
+    /// </summary>
     public class GS1ApplicationIdentifiers
     {
         #region Private fields
@@ -22,6 +25,9 @@ namespace N1EEZB.GS1Barcodes
         #endregion
 
         #region Private methods
+        /// <summary>
+        /// Fill the Application Identifier list
+        /// </summary>
         private void CreateApplicationIdentifiers()
         {
             applicationIdentifiers.Add(new GS1ApplicationIdentifier(
@@ -69,6 +75,11 @@ namespace N1EEZB.GS1Barcodes
         #endregion
 
         #region Public methods
+        /// <summary>
+        /// Get GS1 Application Identifier
+        /// </summary>
+        /// <param name="ai">Application Identifier code</param>
+        /// <returns>The GS1 Application Identifier</returns>
         public GS1ApplicationIdentifier GetApplicationIdentifier(string ai)
         {
             var result =

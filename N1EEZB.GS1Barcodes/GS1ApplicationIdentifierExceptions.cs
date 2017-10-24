@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace N1EEZB.GS1Barcodes
 {
+    /// <summary>
+    /// Exception: Application Identifier not found
+    /// </summary>
     public class GS1ApplicationIdentifierNotFoundException : Exception
     {
         public GS1ApplicationIdentifierNotFoundException() { }
@@ -13,6 +16,9 @@ namespace N1EEZB.GS1Barcodes
         public GS1ApplicationIdentifierNotFoundException(string message, Exception innerException) : base(message, innerException) { }
     }
 
+    /// <summary>
+    /// Exception: Invalid GS1 field length
+    /// </summary>
     public class GS1FieldLengthException : Exception
     {
         public GS1FieldLengthException() { }
@@ -20,6 +26,9 @@ namespace N1EEZB.GS1Barcodes
         public GS1FieldLengthException(string message, Exception innerException) : base(message, innerException) { }
     }
 
+    /// <summary>
+    /// Exception: Invalid number format
+    /// </summary>
     public class GS1NumberFormatException : Exception
     {
         public GS1NumberFormatException() { }
@@ -27,6 +36,9 @@ namespace N1EEZB.GS1Barcodes
         public GS1NumberFormatException(string message, Exception innerException) : base(message, innerException) { }
     }
 
+    /// <summary>
+    /// Exception: Invalid date format
+    /// </summary>
     public class GS1DateFormatException : Exception
     {
         public GS1DateFormatException() { }
