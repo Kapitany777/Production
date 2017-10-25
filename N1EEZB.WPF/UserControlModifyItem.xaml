@@ -12,7 +12,7 @@
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Modify Item" Style="{StaticResource TextBlockHeader}" Grid.Row="0" />
+        <TextBlock Text="Modify / Delete Item" Style="{StaticResource TextBlockHeader}" Grid.Row="0" />
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
