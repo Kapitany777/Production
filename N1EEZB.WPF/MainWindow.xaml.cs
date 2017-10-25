@@ -61,6 +61,11 @@ namespace N1EEZB.WPF
             ContentControlMain.Content = new UserControlProduction(databaseProvider);
         }
 
+        private void MenuQueryProduction_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlMain.Content = new UserControlQueryProduction(databaseProvider);
+        }
+
         private void MenuAbout_Click(object sender, RoutedEventArgs e)
         {
             DialogAbout dialogAbout = new DialogAbout();

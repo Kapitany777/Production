@@ -183,8 +183,28 @@ namespace N1EEZB.Data
             using (DbProductionContext context = new DbProductionContext())
             {
                 context.Entry(productionData.Item).State = EntityState.Unchanged;
+                context.Entry(productionData.Storage).State = EntityState.Unchanged;
                 context.ProductionDatas.Add(productionData);
                 context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// Get production list, filtered by item
+        /// </summary>
+        /// <param name="item">The item</param>
+        /// <returns>The list of productions</returns>
+        public IEnumerable<ProductionData> GetProductionByItem(Item item)
+        {
+            using (DbProductionContext context = new DbProductionContext())
+            {
+                var result =
+                    (from t in context.ProductionDatas
+                     where t.Item.ItemId == item.ItemId
+                     orderby t.ProductionId
+                     select t).ToList();
+
+                return result;
             }
         }
         #endregion

@@ -15,6 +15,9 @@ namespace N1EEZB.Data.Models
         public int ProductionId { get; set; }
 
         [Required]
+        public Storage Storage { get; set; }
+        
+        [Required]
         [StringLength(60)]
         public string GS1Barcode { get; set; }
 
@@ -23,5 +26,8 @@ namespace N1EEZB.Data.Models
 
         [Required]
         public int Quantity { get; set; }
+
+        [Required]
+        public DateTime ProductionDate { get; set; }
     }
 }

@@ -84,6 +84,9 @@
     <Compile Include="UserControlQueryItemTypes.xaml.cs">
       <DependentUpon>UserControlQueryItemTypes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlQueryProduction.xaml.cs">
+      <DependentUpon>UserControlQueryProduction.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControlQueryStorages.xaml.cs">
       <DependentUpon>UserControlQueryStorages.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlQueryItemTypes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlQueryProduction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -46,6 +46,11 @@
             <MenuItem Header="Production">
                 <MenuItem Name="MenuStartProduction" Header="Start Production"
                           Click="MenuStartProduction_Click" />
+
+                <Separator />
+
+                <MenuItem Name="MenuQueryProduction" Header="Query Production"
+                          Click="MenuQueryProduction_Click" />
             </MenuItem>
 
             <MenuItem Header="Help">
@@ -98,6 +103,13 @@
                 <StackPanel Orientation="Vertical">
                     <Image Source="Images/gear.png" Style="{StaticResource ImageToolbar}" />
                     <TextBlock Text="Start Production" Style="{StaticResource TextBlockToolbar}" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="ButtonQueryProduction" ToolTip="Query Production" Style="{StaticResource ButtonToolbar}" Click="MenuQueryProduction_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/query.png" Style="{StaticResource ImageToolbar}" />
+                    <TextBlock Text="Query Production" Style="{StaticResource TextBlockToolbar}" />
                 </StackPanel>
             </Button>
 

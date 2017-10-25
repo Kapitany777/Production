@@ -17,7 +17,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <StackPanel>
                 <TextBlock Text="PRODUCTION MODULE" Style="{StaticResource TextBlockAboutTitle}" />
-                <TextBlock Name="TextBlockProgramVersion" Text="V1.01 2017.10.24." Style="{StaticResource TextBlockAboutVersion}" />
+                <TextBlock Name="TextBlockProgramVersion" Text="V1.01 2017.10.25." Style="{StaticResource TextBlockAboutVersion}" />
             </StackPanel>
             <Image Source="images/pyramid.png" Style="{StaticResource ImageAbout}" />
         </StackPanel>

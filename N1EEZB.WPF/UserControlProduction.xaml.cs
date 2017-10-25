@@ -63,12 +63,16 @@ namespace N1EEZB.WPF
 
                 TextBlockLotNumber.Text = barcode.BatchOrLotNumber;
 
+                Storage storage = ComboBoxStorage.SelectedItem as Storage;
+
                 databaseProvider.AddProduction(
                     new ProductionData
                     {
                         GS1Barcode = TextBoxBarcode.Text,
+                        Storage = storage,
                         Item = item,
-                        Quantity = item.QuantityPerItem
+                        Quantity = item.QuantityPerItem,
+                        ProductionDate = DateTime.Now
                     }
                     );
             }
